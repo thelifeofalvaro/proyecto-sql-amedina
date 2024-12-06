@@ -1,7 +1,8 @@
 # proyecto-sql-amedina
 Primer proyecto/entregable del Máster de Data &amp; Analytics de ThePower
 
-Enunciado completo:
+Enunciado completo: 
+[EnunciadoDataProject_SQL.Lógica.pdf](https://github.com/user-attachments/files/18040737/EnunciadoDataProject_SQL.Logica.pdf)
 DataProject: LógicaConsultasSQL
 
 1. Crea el esquema de la BBDD.
@@ -52,8 +53,7 @@ DataProject: LógicaConsultasSQL
 46. Encuentra todos los actores que no han participado en películas.
 47. Selecciona el nombre de los actores y la cantidad de películas en las que han participado.
 48. Crea una vista llamada “actor_num_peliculas” que muestre los nombres
-de los actores y el número de películas en las que han parti[EnunciadoDataProject_SQL.Lógica.pdf](https://github.com/user-attachments/files/18040737/EnunciadoDataProject_SQL.Logica.pdf)
-cipado.
+de los actores y el número de películas en las que han participado.
 49. Calcula el número total de alquileres realizados por cada cliente.
 50. Calcula la duración total de las películas en la categoría 'Action'.
 51. Crea una tabla temporal llamada “cliente_rentas_temporal” para almacenar el total de alquileres por cliente.
