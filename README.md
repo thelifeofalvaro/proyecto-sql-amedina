@@ -5,7 +5,7 @@ Lógica y Consultas SQL
 
 INTRODUCCIÓN 
 
-El objetivo de este proyecto es explorar y manipular una base de datos relacional que me han proporcionado. Es una base de datos que muestra un sistema de un videoclub (alquiler del peliculas), incluye información tanto del videoclub (empleados, direcciones, tiendas, clientes, alquileres, inventario, etc...) como de las peliculas (titulos, actores, idiomas, categorias, etc...). En el proyecto se realizan distintas queries/consultas, en base al siguiente enunciado:
+  El objetivo de este proyecto es explorar y manipular una base de datos relacional que me han proporcionado. Es una base de datos que muestra un sistema de un videoclub (alquiler del peliculas), incluye     información tanto del videoclub (empleados, direcciones, tiendas, clientes, alquileres, inventario, etc...) como de las peliculas (titulos, actores, idiomas, categorias, etc...). En el proyecto se realizan distintas queries/consultas, en base al siguiente enunciado:
 
 [EnunciadoDataProject_SQL.Lógica.pdf](https://github.com/user-attachments/files/18040737/EnunciadoDataProject_SQL.Logica.pdf)
 
@@ -29,57 +29,55 @@ PASO A PASO
 
 DOCUMENTACIÓN Y ENTREGA
 
-Junto a cada consulta se han ido realizando comentarios explicativos, por simple que sea la consulta, para que se entienda como he llegado a la solución del enunciado, y para que sirva como documentación
+  Junto a cada consulta se han ido realizando comentarios explicativos, por simple que sea la consulta, para que se entienda como he llegado a la solución del enunciado, y para que sirva como documentación
 
-Se ha preparado este mismo archivo para una explicación del proyecto
+  Se ha preparado este mismo archivo para una explicación del proyecto
 
-Archivo SQL generado con todas las queries (y enunciados), en un solo documento
+  Archivo SQL generado con todas las queries (y enunciados), en un solo documento
 
 ANALISIS DE LA BASE DE DATOS
 
-Algunas tablas de la Base de Datos:
+  Algunas tablas de la Base de Datos:
 
-film: Proporciona información sobre las peliculas
+  film: Proporciona información sobre las peliculas
 
-category: Muestra las diferentes categorías de las peliculas
+  category: Muestra las diferentes categorías de las peliculas
 
-actor: Almacena los nombre de los actores que participan en las peliculas
+  actor: Almacena los nombre de los actores que participan en las peliculas
 
-rental: Registra los alquileres del videoclub con fecha y hora
+  rental: Registra los alquileres del videoclub con fecha y hora
 
-customer: Guarda la información de los clientes del videclub
+  customer: Guarda la información de los clientes del videclub
 
-payment: Proporciona información sobre los pagos de los clientes
+  payment: Proporciona información sobre los pagos de los clientes
 
-... Para ver el resto de tablas, revisa el diagrama ER
+  ... Para ver el resto de tablas, revisa el diagrama ER
 
 Algunas relaciones de la base de datos:
 
-Cada pelicula (tabla film) puede pertener a varias categorias (film_category)
+  Cada pelicula (tabla film) puede pertener a varias categorias (film_category)
 
-Los alquileres (rental) se vinculan con un cliente (customer) y al inventario (inventory)
+  Los alquileres (rental) se vinculan con un cliente (customer) y al inventario (inventory)
 
-Los pagos (payment) se asocian con los alquileres (rental)
+  Los pagos (payment) se asocian con los alquileres (rental)
 
-... Para ver el resto de relacionces, revisa el diagrama ER
+  ... Para ver el resto de relacionces, revisa el diagrama ER
 
 ¿CÓMO EJECUTAR LAS QUERIES?
 
-Primero de todo instala el Software mencionado anteriormente
+  Primero de todo instala el Software mencionado anteriormente
 
-Configura la conexión de la base de datos con ambos programas
+  Configura la conexión de la base de datos con ambos programas
 
-Descarga el archivo SQL del repositorio
+  Descarga el archivo SQL del repositorio
 
-Importalo a DBeaver, o copia las consultas
+  Importalo a DBeaver, o copia las consultas
 
-Ejecutalas por separado para ver los resultados
+  Ejecutalas por separado para ver los resultados
 
-** Cada consulta se ha identificado con su numero y enunciado con formato de comentario
+  ** Cada consulta se ha identificado con su numero y enunciado con formato de comentario
 
-Consulta los comentarios para enteder la solución de cada enunciado
-
-EJEMPLO 
+  Consulta los comentarios para enteder la solución de cada enunciado
 
 ARCHIVOS INCLUIDOS
 
