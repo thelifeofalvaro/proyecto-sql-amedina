@@ -40,35 +40,53 @@ ANALISIS DE LA BASE DE DATOS
 Algunas tablas de la Base de Datos:
 
 film: Proporciona información sobre las peliculas
+
 category: Muestra las diferentes categorías de las peliculas
+
 actor: Almacena los nombre de los actores que participan en las peliculas
+
 rental: Registra los alquileres del videoclub con fecha y hora
+
 customer: Guarda la información de los clientes del videclub
+
 payment: Proporciona información sobre los pagos de los clientes
+
 ... Para ver el resto de tablas, revisa el diagrama ER
 
 Algunas relaciones de la base de datos:
 
 Cada pelicula (tabla film) puede pertener a varias categorias (film_category)
+
 Los alquileres (rental) se vinculan con un cliente (customer) y al inventario (inventory)
+
 Los pagos (payment) se asocian con los alquileres (rental)
+
 ... Para ver el resto de relacionces, revisa el diagrama ER
 
 ¿CÓMO EJECUTAR LAS QUERIES?
 
 Primero de todo instala el Software mencionado anteriormente
+
 Configura la conexión de la base de datos con ambos programas
+
 Descarga el archivo SQL del repositorio
+
 Importalo a DBeaver, o copia las consultas
+
 Ejecutalas por separado para ver los resultados
+
 ** Cada consulta se ha identificado con su numero y enunciado con formato de comentario
+
 Consulta los comentarios para enteder la solución de cada enunciado
-Aquí hay un ejemplo de cómo se ven los resultados:
+
+EJEMPLO 
 
 ARCHIVOS INCLUIDOS
 
   README.md: Este mismo archivo para documentar el proyecto
+  
   Queries_Proyecto.sql: Archivo con todas las consultas comentadas siguiendo el enunciado 
+  
   Esquema_BBDD: Archivo con el diagrama Entidad-Relacion
 
 OBSERVACIONES
@@ -78,4 +96,3 @@ OBSERVACIONES
   Algunas de las relaciones necesitan un JOIN especifico para asegurar que el resultado de la consulta es el adecuado
 
 ¡Gracias por revisar este proyecto!
-
