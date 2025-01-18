@@ -1,5 +1,5 @@
 -- 1. Crea el esquema de la BBDD. 
--- HECHA YA IMAGEN
+-- Consultar Archivo
 -- 2. Muestra los nombres de todas las películas con una clasificación por edades de ‘R’.
 
 SELECT -- Se selecciona la columna que nos interesa
@@ -841,11 +841,11 @@ SELECT DISTINCT -- Seleccionamos las columnas que nos interesan
     f.title 
 FROM -- De la table correspondiente
     rental r
-JOIN 
+INNER JOIN 
     inventory i 
 ON 
     r.inventory_id = i.inventory_id
-JOIN 
+INNER JOIN 
     film f 
 ON 
     i.film_id = f.film_id
@@ -861,7 +861,7 @@ SELECT DISTINCT -- Seleccionamos las columnas que nos interesan
 	f.title
 FROM -- De la table correspondiente
 	film f
-JOIN -- Hacemos el JOIN con la tabla de categorías para cruzarlas
+INNER JOIN -- Hacemos el JOIN con la tabla de categorías para cruzarlas
 	film_category fc 
 ON 
 	f.film_id = fc.film_id
@@ -893,15 +893,15 @@ SELECT DISTINCT -- Seleccionamos las columnas que nos interesan, como valores un
 	c.last_name AS "Apellido"
 FROM -- De la table correspondiente
 	customer c
-JOIN -- Juntamos con la tabla del alquileres
+INNER JOIN -- Juntamos con la tabla del alquileres
 	rental r 
 ON 
 	c.customer_id = r.customer_id
-JOIN -- De las que tenemos en el inventario
+INNER JOIN -- De las que tenemos en el inventario
 	inventory i 
 ON 
 	r.inventory_id = i.inventory_id
-JOIN
+INNER JOIN
 	film f 
 ON 
 	i.film_id = f.film_id
