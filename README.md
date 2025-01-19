@@ -1,5 +1,5 @@
 # proyecto-sql-amedina
-Primer proyecto/entregable del Máster de Data &amp; Analytics de ThePower
+Primer proyecto/entregable del Máster de Data & Analytics de ThePower
 
 Lógica y Consultas SQL
 
@@ -25,15 +25,17 @@ PASO A PASO
 
   1. Configuración de la base de datos: Para que todo funcionara correctamente una vez descargada de la web.
   2. Analisis de la base de datos: Antes de empezar a trabajar con las consultas, revisé la base de datos y obtuve el diagrama ER (Con la base de datos abierta y ejecutada, pulsando Ctrl+Másyus+Intro; o click derecho sobre el "public" de la BD, y de nuevo, click, en "Obetener diagrama", para tener una visión más clara de las relaciones entre tablas para hacer las consultas.
-  3. Ejecución de consultas: He realizado distintos tipos de consultas, desde las básicas en una sola tabla, hasta consultas en varias tablas mediante varios tipos de JOIN, así como consultas anidadas y CTEs     para casos más complejos. Para todas las consultas, antes de llegar a la respuesta definitiva, he ido haciendo ajustes para comprobar que los datos eran los deseados, esos ajustes han eliminado columnas innecesarias para responder al enunciado de la consulta, pero que si pueden ayudar en una comprensión del paso a paso y más a un nivel principiante
+  3. Ejecución de consultas: He realizado distintos tipos de consultas, desde las básicas en una sola tabla, hasta consultas en varias tablas mediante varios tipos de JOIN, así como consultas anidadas y CTEs para casos más complejos. Para todas las consultas, antes de llegar a la respuesta definitiva, he ido haciendo ajustes para comprobar que los datos eran los deseados, esos ajustes han eliminado columnas innecesarias para responder al enunciado de la consulta, pero que si pueden ayudar en una comprensión del paso a paso y más a un nivel principiante
 
 DOCUMENTACIÓN Y ENTREGA
 
-  Junto a cada consulta se han ido realizando comentarios explicativos, por simple que sea la consulta, para que se entienda como he llegado a la solución del enunciado, y para que sirva como documentación
+  Junto a cada consulta se han ido realizando comentarios explicativos, por simple que sea la consulta, para que se entienda como he llegado a la solución del enunciado, y para que sirva como documentación. Archivos Incluidos:
 
-  Se ha preparado este mismo archivo para una explicación del proyecto
-
-  Archivo SQL generado con todas las queries (y enunciados), en un solo documento
+  README.md: Este mismo archivo para documentar el proyecto
+  
+  Queries_Proyecto.sql: Archivo con todas las consultas comentadas siguiendo el enunciado 
+  
+  Esquema_BBDD: Archivo con el diagrama Entidad-Relacion
 
 ANALISIS DE LA BASE DE DATOS
 
@@ -79,17 +81,40 @@ Algunas relaciones de la base de datos:
 
   Consulta los comentarios para enteder la solución de cada enunciado
 
-ARCHIVOS INCLUIDOS
+EJEMPLO DE QUERY
 
-  README.md: Este mismo archivo para documentar el proyecto
-  
-  Queries_Proyecto.sql: Archivo con todas las consultas comentadas siguiendo el enunciado 
-  
-  Esquema_BBDD: Archivo con el diagrama Entidad-Relacion
+34. Encuentra los 5 clientes que más dinero se hayan gastado con nosotros.
+
+SELECT 
+	c.customer_id, 
+	CONCAT(c.first_name, ' ', c.last_name) AS "Nombre Cliente",
+	SUM(p.amount) AS "Total Gastado"
+FROM 
+	customer c
+INNER JOIN
+	payment p 
+ON 
+	c.customer_id = p.customer_id
+GROUP BY
+	c.customer_id, c.first_name, c.last_name
+ORDER BY 
+	"Total Gastado"  DESC
+LIMIT 5; 
+
+Resultado esperado:  
+|                     |                    |                    |
+| customer_id         | Nombre cliente     | Total gastado      |  
+|---------------------|--------------------|--------------------|  
+| 526                 | KARL SEAL          |  221.55            |
+| 148                 | ELEANOR HUNT       |  216.54            |
+| 144                 | CLARA SHAW         |  195.58            |
+| 137                 | RHONDA KENNEDY     |  194.61            |
+| 178                 | MARION SNYDER      |  194.61            |
+
 
 OBSERVACIONES
 
-  Para poder trabajar con fechas y horas, he tenido que dividir los campos del tipo timestap
+  Para poder trabajar con fechas y horas, he tenido que dividir los campos del tipo timestap en alguna de las queries
 
   Algunas de las relaciones necesitan un JOIN especifico para asegurar que el resultado de la consulta es el adecuado
 
